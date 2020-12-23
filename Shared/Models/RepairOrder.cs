@@ -8,7 +8,7 @@ namespace Shared.Models
 {
     public class RepairOrder
     {
-        public String Id { get; set; }
+        public int Id { get; set; }
         public String DateOfReceipt { get; set; }
         public String Description { get; set; }
         public decimal Price { get; set; }
