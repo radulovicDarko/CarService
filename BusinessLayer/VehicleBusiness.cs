@@ -35,5 +35,10 @@ namespace BusinessLayer
         {
             return this.vehicleRepository.DeleteVehicle(owner);
         }
+        public List<Vehicle> GetRepairedVehicles()
+        {
+            return this.vehicleRepository.GetAllVehicles()
+                .Where(v => v.RepairStatus).ToList();
+        }
     }
 }
