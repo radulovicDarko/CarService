@@ -1,5 +1,6 @@
 ﻿using Shared.Interfaces.Business;
 using Shared.Interfaces.Repository;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,23 @@ namespace BusinessLayer
         public OwnerBusiness(IOwnerRepository _ownerRepository)
         {
             this.ownerRepository = _ownerRepository;
+        }
+        public List<Owner> getAllOwners()
+        {
+            return this.ownerRepository.GetAllOwners();
+        }
+        public int deleteOwner(Owner owner)
+        {
+            return this.ownerRepository.DeleteOwner(owner);
+        }
+        public int insertOwner(Owner owner)
+        {
+            return this.ownerRepository.InsertOwner(owner);
+        }
+
+        public int updateOwner(Owner owner)
+        {
+            return this.ownerRepository.UpdateOwner(owner);
         }
     }
 }

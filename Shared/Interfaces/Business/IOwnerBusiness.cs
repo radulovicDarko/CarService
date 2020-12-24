@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,9 @@ namespace Shared.Interfaces.Business
 {
     public interface IOwnerBusiness
     {
+        List<Owner> getAllOwners();
+        int insertOwner(Owner owner);
+        int updateOwner(Owner owner);
+        int deleteOwner(Owner owner);
     }
 }
