@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,9 @@ namespace Shared.Interfaces.Repository
 {
     public interface IVehicleRepository
     {
+        List<Vehicle> GetAllVehicles();
+        int InsertVehicle(Vehicle temp);
+        int UpdateVehicle(Vehicle vehicle);
+        int DeleteVehicle(Owner owner);
     }
 }
