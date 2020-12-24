@@ -1,5 +1,6 @@
 ﻿using Shared.Interfaces.Business;
 using Shared.Interfaces.Repository;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,27 @@ namespace BusinessLayer
         {
             this.repairOrderRepository = _repairOrderRepository;
         }
+
+
+
+        public List<RepairOrder> getAllRepairOrders()
+    {
+        return this.repairOrderRepository.GetAllRepairOrders();
     }
-}
+    public int insertRepairOrder(RepairOrder repairOrder)
+    {
+        return this.repairOrderRepository.InsertRepairOrder(repairOrder);
+    }
+
+    public int updateRepairOrder(RepairOrder repairOrder)
+    {
+        return this.repairOrderRepository.UpdateRepairOrder(repairOrder);
+        }
+    public int deleteRepairOrder(RepairOrder repairOrder)
+    {
+        return this.repairOrderRepository.DeleteRepairOrder(repairOrder);
+        }
+    
+        }
+
+    }
