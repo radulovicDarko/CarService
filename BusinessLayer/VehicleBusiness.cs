@@ -17,8 +17,6 @@ namespace BusinessLayer
         {
             this.vehicleRepository = _vehicleRepository;
         }
-
-
         public List<Vehicle> getAllVehicles()
         {
             return this.vehicleRepository.GetAllVehicles();
@@ -37,8 +35,7 @@ namespace BusinessLayer
         }
         public List<Vehicle> GetRepairedVehicles()
         {
-            return this.vehicleRepository.GetAllVehicles()
-                .Where(v => v.RepairStatus).ToList();
+            return this.vehicleRepository.GetAllVehicles().Where(v => v.RepairStatus).ToList();
         }
     }
 }

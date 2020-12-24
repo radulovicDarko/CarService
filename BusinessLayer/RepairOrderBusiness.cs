@@ -17,27 +17,22 @@ namespace BusinessLayer
         {
             this.repairOrderRepository = _repairOrderRepository;
         }
-
-
-
         public List<RepairOrder> getAllRepairOrders()
-    {
-        return this.repairOrderRepository.GetAllRepairOrders();
-    }
-    public int insertRepairOrder(RepairOrder repairOrder)
-    {
-        return this.repairOrderRepository.InsertRepairOrder(repairOrder);
-    }
-
-    public int updateRepairOrder(RepairOrder repairOrder)
-    {
-        return this.repairOrderRepository.UpdateRepairOrder(repairOrder);
+        {
+            return this.repairOrderRepository.GetAllRepairOrders();
         }
-    public int deleteRepairOrder(RepairOrder repairOrder)
-    {
-        return this.repairOrderRepository.DeleteRepairOrder(repairOrder);
-        }
-    
+        public int insertRepairOrder(RepairOrder repairOrder)
+        {
+            return this.repairOrderRepository.InsertRepairOrder(repairOrder);
         }
 
+        public int updateRepairOrder(RepairOrder repairOrder)
+        {
+            return this.repairOrderRepository.UpdateRepairOrder(repairOrder);
+        }
+        public int deleteRepairOrder(RepairOrder repairOrder)
+        {
+            return this.repairOrderRepository.DeleteRepairOrder(repairOrder);
+        }
     }
+}

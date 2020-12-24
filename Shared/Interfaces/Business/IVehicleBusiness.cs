@@ -9,7 +9,6 @@ namespace Shared.Interfaces.Business
 {
     public interface IVehicleBusiness
     {
-
         List<Vehicle> getAllVehicles();
         int insertVehicle(Vehicle temp);
         int updateVehicle(Vehicle vehicle);
