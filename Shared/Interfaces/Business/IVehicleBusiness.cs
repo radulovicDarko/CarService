@@ -9,9 +9,12 @@ namespace Shared.Interfaces.Business
 {
     public interface IVehicleBusiness
     {
-        List<RepairOrder> getAllRepairOrders();
-        int insertRepairOrder(RepairOrder repairOrder);
-        int updateRepairOrder(RepairOrder repairOrder);
-        int deleteRepairOrder(RepairOrder repairOrder);
+
+        List<Vehicle> getAllVehicles();
+        int insertVehicle(Vehicle temp);
+        int updateVehicle(Vehicle vehicle);
+        int deleteVehicle(Owner owner);
+
+
     }
 }
