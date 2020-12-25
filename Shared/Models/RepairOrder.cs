@@ -12,5 +12,6 @@ namespace Shared.Models
         public String DateOfReceipt { get; set; }
         public String Description { get; set; }
         public decimal Price { get; set; }
+        public String VehicleId { get; set; }
     }
 }

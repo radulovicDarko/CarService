@@ -25,6 +25,7 @@ namespace DataAccessLayer.Models
                 temp.DateOfReceipt = sqlDataReader.GetString(1);
                 temp.Description = sqlDataReader.GetString(2);
                 temp.Price = sqlDataReader.GetDecimal(3);
+                temp.VehicleId = sqlDataReader.GetString(4);
 
                 ListToReturn.Add(temp);
             }
@@ -35,14 +36,15 @@ namespace DataAccessLayer.Models
 
         public int InsertRepairOrder(RepairOrder repairOrder)
         {
-            var result = DBConnection.EditData("INSERT INTO RepairOrders VALUES('(0)', '(1)', '(2)', '(3)");
+            int result = DBConnection.EditData(string.Format("INSERT INTO RepairOrders VALUES ('{0}', '{1}', '{2}' , '{3}')",
+                           repairOrder.DateOfReceipt, repairOrder.Description, repairOrder.Price, repairOrder.VehicleId));
 
             return result;
         }
 
         public int UpdateRepairOrder(RepairOrder repairOrder)
         {
-            var result = DBConnection.EditData(string.Format("UPDATE RepairOrders SET ='{0}', DateOfReceipt='{1}', Description ='{2}', Price ='{3}'", repairOrder.DateOfReceipt, repairOrder.Description, repairOrder.Price));
+            var result = DBConnection.EditData(string.Format("UPDATE RepairOrders SET ='{0}', DateOfReceipt='{1}', Description ='{2}', Price ='{3}', VehicleId = '{4}'", repairOrder.DateOfReceipt, repairOrder.Description, repairOrder.Price, repairOrder.VehicleId));
 
             return result;
         }
