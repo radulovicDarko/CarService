@@ -36,7 +36,8 @@ namespace DataAccessLayer
 
         public int InsertOwner(Owner owner)
         {
-            var result = DBConnection.EditData("INSERT INTO Owners VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')");
+            int result = DBConnection.EditData(string.Format("INSERT INTO Owners VALUES ('{0}', '{1}', '{2}' , '{3}', '{4}', '{5}')",
+                           owner.Name, owner.Surname, owner.Gender, owner.PhoneNumber, owner.Address, owner.Email));
 
             return result;
         }
