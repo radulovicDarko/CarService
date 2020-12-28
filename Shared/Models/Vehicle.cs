@@ -13,7 +13,6 @@ namespace Shared.Models
         public String Type { get; set; }
         public int YearOfManufacture { get; set; }
         public String LicencePlate { get; set; }
-        public bool RepairStatus { get; set; }
         public int OwnerId { get; set; }
     }
 }

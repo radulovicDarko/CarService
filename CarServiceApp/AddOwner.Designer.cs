@@ -30,8 +30,7 @@ namespace CarServiceApp
         private void InitializeComponent()
         {
             this.labelClientsSurname = new System.Windows.Forms.Label();
-            this.buttonNewRepairOrder = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.labelNewCarInspectionTitle = new System.Windows.Forms.Label();
             this.labelOwnersName = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@ namespace CarServiceApp
             this.labelAddress = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
+            this.buttonNewClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelClientsSurname
@@ -56,26 +56,16 @@ namespace CarServiceApp
             this.labelClientsSurname.TabIndex = 24;
             this.labelClientsSurname.Text = "Surname";
             // 
-            // buttonNewRepairOrder
+            // buttonClose
             // 
-            this.buttonNewRepairOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNewRepairOrder.Location = new System.Drawing.Point(223, 374);
-            this.buttonNewRepairOrder.Name = "buttonNewRepairOrder";
-            this.buttonNewRepairOrder.Size = new System.Drawing.Size(113, 44);
-            this.buttonNewRepairOrder.TabIndex = 21;
-            this.buttonNewRepairOrder.Text = "Create new repair order";
-            this.buttonNewRepairOrder.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(66, 374);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(113, 44);
-            this.buttonCancel.TabIndex = 20;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(66, 374);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(113, 44);
+            this.buttonClose.TabIndex = 20;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // labelNewCarInspectionTitle
             // 
@@ -185,6 +175,16 @@ namespace CarServiceApp
             this.labelEmail.TabIndex = 32;
             this.labelEmail.Text = "E-mail";
             // 
+            // buttonNewClient
+            // 
+            this.buttonNewClient.Location = new System.Drawing.Point(195, 374);
+            this.buttonNewClient.Name = "buttonNewClient";
+            this.buttonNewClient.Size = new System.Drawing.Size(113, 44);
+            this.buttonNewClient.TabIndex = 34;
+            this.buttonNewClient.Text = "Add client";
+            this.buttonNewClient.UseVisualStyleBackColor = true;
+            this.buttonNewClient.Click += new System.EventHandler(this.buttonNewClient_Click);
+            // 
             // AddOwner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +192,7 @@ namespace CarServiceApp
             this.BackgroundImage = global::CarServiceApp.Properties.Resources.background5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(385, 435);
+            this.Controls.Add(this.buttonNewClient);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.textBoxAddress);
@@ -200,8 +201,7 @@ namespace CarServiceApp
             this.Controls.Add(this.textBoxClientsSurname);
             this.Controls.Add(this.textBoxClientName);
             this.Controls.Add(this.labelClientsSurname);
-            this.Controls.Add(this.buttonNewRepairOrder);
-            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelNewCarInspectionTitle);
             this.Controls.Add(this.labelOwnersName);
             this.Controls.Add(this.textBoxPhone);
@@ -209,6 +209,7 @@ namespace CarServiceApp
             this.Controls.Add(this.labelClientsGender);
             this.Name = "AddOwner";
             this.Text = "AddOwner";
+            this.Load += new System.EventHandler(this.AddOwner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,8 +217,7 @@ namespace CarServiceApp
 
         #endregion
         private System.Windows.Forms.Label labelClientsSurname;
-        private System.Windows.Forms.Button buttonNewRepairOrder;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label labelNewCarInspectionTitle;
         private System.Windows.Forms.Label labelOwnersName;
         private System.Windows.Forms.TextBox textBoxPhone;
@@ -230,5 +230,6 @@ namespace CarServiceApp
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Button buttonNewClient;
     }
 }

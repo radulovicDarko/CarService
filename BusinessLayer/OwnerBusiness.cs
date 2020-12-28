@@ -21,6 +21,10 @@ namespace BusinessLayer
         {
             return this.ownerRepository.GetAllOwners();
         }
+        public Owner getOwnerByID(int id) 
+        {
+            return this.ownerRepository.GetAllOwners().Where(o => o.Id == id).FirstOrDefault();
+        }
         public int deleteOwner(Owner owner)
         {
             return this.ownerRepository.DeleteOwner(owner);
@@ -33,6 +37,11 @@ namespace BusinessLayer
         public int updateOwner(Owner owner)
         {
             return this.ownerRepository.UpdateOwner(owner);
+        }
+
+        public Owner getOwnerByNameAndSurname(String name, String surname)
+        {
+            return this.ownerRepository.GetAllOwners().Where(o => o.Name.Equals(name) && o.Surname.Equals(surname)).FirstOrDefault();
         }
     }
 }

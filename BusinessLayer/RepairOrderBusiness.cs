@@ -21,18 +21,30 @@ namespace BusinessLayer
         {
             return this.repairOrderRepository.GetAllRepairOrders();
         }
+        public RepairOrder getRepairOrderByID(int id)
+        {
+            return this.repairOrderRepository.GetAllRepairOrders().Where(r => r.Id == id).First();
+        }
+        public List<RepairOrder> getActiveRepairOrders()
+        {
+            return this.repairOrderRepository.GetAllRepairOrders().Where(r => !r.RepairStatus).ToList();
+        }
         public int insertRepairOrder(RepairOrder repairOrder)
         {
             return this.repairOrderRepository.InsertRepairOrder(repairOrder);
         }
 
-        public int updateRepairOrder(RepairOrder repairOrder)
+        public int updateRepairOrder(RepairOrder repairOrder, int id)
         {
-            return this.repairOrderRepository.UpdateRepairOrder(repairOrder);
+            return this.repairOrderRepository.UpdateRepairOrder(repairOrder,id);
         }
-        public int deleteRepairOrder(RepairOrder repairOrder)
+        public int deleteRepairOrder(int repairOrderID)
         {
-            return this.repairOrderRepository.DeleteRepairOrder(repairOrder);
+            return this.repairOrderRepository.DeleteRepairOrder(repairOrderID);
+        }
+        public int updateRepairStatus(int id)
+        {
+            return this.repairOrderRepository.UpdateRepairStatus(id);
         }
     }
 }

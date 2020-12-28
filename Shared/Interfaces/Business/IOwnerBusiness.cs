@@ -13,5 +13,7 @@ namespace Shared.Interfaces.Business
         int insertOwner(Owner owner);
         int updateOwner(Owner owner);
         int deleteOwner(Owner owner);
+        Owner getOwnerByID(int id);
+        Owner getOwnerByNameAndSurname(String name, String surname);
     }
 }

@@ -31,6 +31,9 @@ namespace DataAccessLayer
 
                 listToReturn.Add(temp);
             }
+
+            DBConnection.CloseConnection();
+
             return listToReturn;
         }
 
@@ -39,12 +42,19 @@ namespace DataAccessLayer
             int result = DBConnection.EditData(string.Format("INSERT INTO Owners VALUES ('{0}', '{1}', '{2}' , '{3}', '{4}', '{5}')",
                            owner.Name, owner.Surname, owner.Gender, owner.PhoneNumber, owner.Address, owner.Email));
 
+            DBConnection.CloseConnection();
+
             return result;
         }
 
         public int UpdateOwner(Owner owner)
         {
-            int result = DBConnection.EditData(string.Format("UPDATE Owners SET Name='​{0}​​', Surname='{1}', Gender ='{​2}', PhoneNumber ='{​​3}', Address ='{​4}​', Email ='{​​5}​​'", owner.Name, owner.Surname, owner.Gender, owner.PhoneNumber, owner.Address, owner.Email));
+            Console.WriteLine(owner.Name + " " +owner.Surname + " " +owner.Gender + " " +owner.PhoneNumber + " " +owner.Address + " " +owner.Email + " " +owner.Id);
+            int result = DBConnection.EditData(string.Format(
+                    "UPDATE Owners SET Name='{0}',Surname='{1}',Gender ='{2}',MobilePhone='{3}',Address ='{4}',Email='{5}'" +
+                    "WHERE Id='" +owner.Id+"'", owner.Name, owner.Surname, owner.Gender, owner.PhoneNumber, owner.Address, owner.Email));
+
+            DBConnection.CloseConnection();
 
             return result;
         }
@@ -52,6 +62,8 @@ namespace DataAccessLayer
         public int DeleteOwner(Owner owner)
         {
             var result = DBConnection.EditData("DELETE FROM Owners WHERE Id=" + owner.Id);
+
+            DBConnection.CloseConnection();
 
             return result;
         }

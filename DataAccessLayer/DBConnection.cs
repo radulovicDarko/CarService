@@ -80,7 +80,7 @@ namespace DataAccessLayer
             {
                 OpenConnection();
                 sqlCommand.CommandText = commandText;
-                var result = sqlCommand.ExecuteNonQuery();
+                int result = sqlCommand.ExecuteNonQuery();
                 return result;
             }
             return 0;

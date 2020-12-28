@@ -11,8 +11,10 @@ namespace Shared.Interfaces.Business
     {
         List<RepairOrder> getAllRepairOrders();
         int insertRepairOrder(RepairOrder repairOrder);
-        int updateRepairOrder(RepairOrder repairOrder);
-        int deleteRepairOrder(RepairOrder repairOrder);
-
+        int updateRepairOrder(RepairOrder repairOrder, int id);
+        int deleteRepairOrder(int repairOrderID);
+        RepairOrder getRepairOrderByID(int id);
+        List<RepairOrder> getActiveRepairOrders();
+        int updateRepairStatus(int id);
     }
 }
