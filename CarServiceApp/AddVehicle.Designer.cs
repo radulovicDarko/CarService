@@ -44,6 +44,8 @@ namespace CarServiceApp
             this.labelLicensePlate = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
             this.textBoxType = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxOwners = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBoxEmail
@@ -108,17 +110,18 @@ namespace CarServiceApp
             // buttonNewRepairOrder
             // 
             this.buttonNewRepairOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNewRepairOrder.Location = new System.Drawing.Point(222, 375);
+            this.buttonNewRepairOrder.Location = new System.Drawing.Point(222, 409);
             this.buttonNewRepairOrder.Name = "buttonNewRepairOrder";
             this.buttonNewRepairOrder.Size = new System.Drawing.Size(113, 44);
             this.buttonNewRepairOrder.TabIndex = 40;
             this.buttonNewRepairOrder.Text = "Create new repair order";
             this.buttonNewRepairOrder.UseVisualStyleBackColor = true;
+            this.buttonNewRepairOrder.Click += new System.EventHandler(this.buttonNewRepairOrder_Click);
             // 
             // buttonCancel
             // 
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(65, 375);
+            this.buttonCancel.Location = new System.Drawing.Point(65, 409);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(113, 44);
             this.buttonCancel.TabIndex = 39;
@@ -180,11 +183,34 @@ namespace CarServiceApp
             this.textBoxType.Size = new System.Drawing.Size(175, 20);
             this.textBoxType.TabIndex = 49;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 361);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 18);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Owner ID";
+            // 
+            // comboBoxOwners
+            // 
+            this.comboBoxOwners.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOwners.FormattingEnabled = true;
+            this.comboBoxOwners.Location = new System.Drawing.Point(161, 363);
+            this.comboBoxOwners.Name = "comboBoxOwners";
+            this.comboBoxOwners.Size = new System.Drawing.Size(175, 21);
+            this.comboBoxOwners.TabIndex = 51;
+            // 
             // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 453);
+            this.BackgroundImage = global::CarServiceApp.Properties.Resources.background6;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(384, 467);
+            this.Controls.Add(this.comboBoxOwners);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxType);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
@@ -202,6 +228,7 @@ namespace CarServiceApp
             this.Controls.Add(this.labelType);
             this.Name = "AddVehicle";
             this.Text = "AddVehicle";
+            this.Load += new System.EventHandler(this.AddVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +251,7 @@ namespace CarServiceApp
         private System.Windows.Forms.Label labelLicensePlate;
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.TextBox textBoxType;
-
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxOwners;
     }
 }

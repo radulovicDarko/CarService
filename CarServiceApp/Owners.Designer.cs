@@ -65,6 +65,7 @@ namespace CarServiceApp
             this.buttonUpdateClient.TabIndex = 11;
             this.buttonUpdateClient.Text = "Update info about existing client";
             this.buttonUpdateClient.UseVisualStyleBackColor = true;
+            this.buttonUpdateClient.Click += new System.EventHandler(this.buttonUpdateClient_Click);
             // 
             // buttonDeleteClient
             // 
@@ -75,6 +76,7 @@ namespace CarServiceApp
             this.buttonDeleteClient.TabIndex = 10;
             this.buttonDeleteClient.Text = "Delete client";
             this.buttonDeleteClient.UseVisualStyleBackColor = true;
+            this.buttonDeleteClient.Click += new System.EventHandler(this.buttonDeleteClient_Click);
             // 
             // buttonNewClient
             // 
@@ -96,6 +98,7 @@ namespace CarServiceApp
             this.buttonClientsVehicles.TabIndex = 8;
             this.buttonClientsVehicles.Text = "Show clients vehicles";
             this.buttonClientsVehicles.UseVisualStyleBackColor = true;
+            this.buttonClientsVehicles.Click += new System.EventHandler(this.buttonClientsVehicles_Click);
             // 
             // Owners
             // 
@@ -112,6 +115,7 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonClientsVehicles);
             this.Name = "Owners";
             this.Text = "Clients";
+            this.Load += new System.EventHandler(this.Owners_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

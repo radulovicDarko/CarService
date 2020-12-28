@@ -15,5 +15,10 @@ namespace Shared.Models
         public String PhoneNumber { get; set; }
         public String Address { get; set; }
         public String Email { get; set; }
+
+        public override string ToString()
+        {
+            return Name+" "+Surname;
+        }
     }
 }

@@ -25,17 +25,21 @@ namespace BusinessLayer
         {
             return this.vehicleRepository.InsertVehicle(temp);
         }
-        public int updateVehicle(Vehicle vehicle)
+        public int updateVehicle(Vehicle vehicle, String number)
         {
-            return this.vehicleRepository.UpdateVehicle(vehicle);
+            return this.vehicleRepository.UpdateVehicle(vehicle,number);
         }
         public int deleteVehicle(Owner owner)
         {
             return this.vehicleRepository.DeleteVehicle(owner);
         }
-        public List<Vehicle> GetRepairedVehicles()
+        public Vehicle getVehicleByID(string chassisNumber) 
         {
-            return this.vehicleRepository.GetAllVehicles().Where(v => v.RepairStatus).ToList();
+            return this.vehicleRepository.GetAllVehicles().Where(v => v.ChassisNumber == chassisNumber).FirstOrDefault();
+        }
+        public List<Vehicle> getVehiclesByOwnerID(int id) 
+        {
+            return this.vehicleRepository.GetAllVehicles().Where(v => v.OwnerId == id).ToList<Vehicle>();
         }
     }
 }

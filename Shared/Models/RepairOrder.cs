@@ -13,5 +13,7 @@ namespace Shared.Models
         public String Description { get; set; }
         public decimal Price { get; set; }
         public String VehicleId { get; set; }
+        public bool RepairStatus { get; set; }
+
     }
 }

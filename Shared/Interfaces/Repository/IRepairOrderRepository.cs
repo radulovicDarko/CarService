@@ -11,7 +11,8 @@ namespace Shared.Interfaces.Repository
     {
         List<RepairOrder> GetAllRepairOrders();
         int InsertRepairOrder(RepairOrder repairOrder);
-        int UpdateRepairOrder(RepairOrder repairOrder);
-        int DeleteRepairOrder(RepairOrder repairOrder);
+        int UpdateRepairOrder(RepairOrder repairOrder, int id);
+        int DeleteRepairOrder(int repairOrderID);
+        int UpdateRepairStatus(int id);
     }
 }

@@ -31,7 +31,7 @@ namespace CarServiceApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarInspections));
             this.buttonCarInspectionHistory = new System.Windows.Forms.Button();
-            this.buttonNewInspection = new System.Windows.Forms.Button();
+            this.buttonNewRepairOrder = new System.Windows.Forms.Button();
             this.buttonUpdateInspection = new System.Windows.Forms.Button();
             this.buttonDeleteInspection = new System.Windows.Forms.Button();
             this.listBoxActiveCarInspections = new System.Windows.Forms.ListBox();
@@ -43,45 +43,49 @@ namespace CarServiceApp
             this.buttonCarInspectionHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCarInspectionHistory.Location = new System.Drawing.Point(276, 620);
             this.buttonCarInspectionHistory.Name = "buttonCarInspectionHistory";
-            this.buttonCarInspectionHistory.Size = new System.Drawing.Size(140, 47);
+            this.buttonCarInspectionHistory.Size = new System.Drawing.Size(140, 53);
             this.buttonCarInspectionHistory.TabIndex = 0;
             this.buttonCarInspectionHistory.Text = "Show car inspection history";
             this.buttonCarInspectionHistory.UseVisualStyleBackColor = true;
+            this.buttonCarInspectionHistory.Click += new System.EventHandler(this.buttonCarInspectionHistory_Click);
             // 
-            // buttonNewInspection
+            // buttonNewRepairOrder
             // 
-            this.buttonNewInspection.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNewInspection.Location = new System.Drawing.Point(103, 555);
-            this.buttonNewInspection.Name = "buttonNewInspection";
-            this.buttonNewInspection.Size = new System.Drawing.Size(138, 47);
-            this.buttonNewInspection.TabIndex = 1;
-            this.buttonNewInspection.Text = "New car inspection";
-            this.buttonNewInspection.UseVisualStyleBackColor = true;
-            this.buttonNewInspection.Click += new System.EventHandler(this.buttonNewInspection_Click);
+            this.buttonNewRepairOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewRepairOrder.Location = new System.Drawing.Point(103, 549);
+            this.buttonNewRepairOrder.Name = "buttonNewRepairOrder";
+            this.buttonNewRepairOrder.Size = new System.Drawing.Size(138, 59);
+            this.buttonNewRepairOrder.TabIndex = 1;
+            this.buttonNewRepairOrder.Text = "New repair order";
+            this.buttonNewRepairOrder.UseVisualStyleBackColor = true;
+            this.buttonNewRepairOrder.Click += new System.EventHandler(this.buttonNewInspection_Click);
             // 
             // buttonUpdateInspection
             // 
             this.buttonUpdateInspection.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateInspection.Location = new System.Drawing.Point(275, 555);
+            this.buttonUpdateInspection.Location = new System.Drawing.Point(275, 549);
             this.buttonUpdateInspection.Name = "buttonUpdateInspection";
-            this.buttonUpdateInspection.Size = new System.Drawing.Size(141, 47);
+            this.buttonUpdateInspection.Size = new System.Drawing.Size(141, 59);
             this.buttonUpdateInspection.TabIndex = 3;
             this.buttonUpdateInspection.Text = "Update info about existing car inspection";
             this.buttonUpdateInspection.UseVisualStyleBackColor = true;
+            this.buttonUpdateInspection.Click += new System.EventHandler(this.buttonUpdateInspection_Click);
             // 
             // buttonDeleteInspection
             // 
             this.buttonDeleteInspection.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDeleteInspection.Location = new System.Drawing.Point(103, 620);
             this.buttonDeleteInspection.Name = "buttonDeleteInspection";
-            this.buttonDeleteInspection.Size = new System.Drawing.Size(138, 47);
+            this.buttonDeleteInspection.Size = new System.Drawing.Size(138, 53);
             this.buttonDeleteInspection.TabIndex = 2;
             this.buttonDeleteInspection.Text = "Delete car inspection";
             this.buttonDeleteInspection.UseVisualStyleBackColor = true;
+            this.buttonDeleteInspection.Click += new System.EventHandler(this.buttonDeleteInspection_Click);
             // 
             // listBoxActiveCarInspections
             // 
             this.listBoxActiveCarInspections.FormattingEnabled = true;
+            this.listBoxActiveCarInspections.HorizontalScrollbar = true;
             this.listBoxActiveCarInspections.Location = new System.Drawing.Point(73, 110);
             this.listBoxActiveCarInspections.Name = "listBoxActiveCarInspections";
             this.listBoxActiveCarInspections.Size = new System.Drawing.Size(373, 420);
@@ -109,7 +113,7 @@ namespace CarServiceApp
             this.Controls.Add(this.listBoxActiveCarInspections);
             this.Controls.Add(this.buttonUpdateInspection);
             this.Controls.Add(this.buttonDeleteInspection);
-            this.Controls.Add(this.buttonNewInspection);
+            this.Controls.Add(this.buttonNewRepairOrder);
             this.Controls.Add(this.buttonCarInspectionHistory);
             this.Name = "CarInspections";
             this.Text = "CarInspections";
@@ -122,7 +126,7 @@ namespace CarServiceApp
         #endregion
 
         private System.Windows.Forms.Button buttonCarInspectionHistory;
-        private System.Windows.Forms.Button buttonNewInspection;
+        private System.Windows.Forms.Button buttonNewRepairOrder;
         private System.Windows.Forms.Button buttonUpdateInspection;
         private System.Windows.Forms.Button buttonDeleteInspection;
         private System.Windows.Forms.ListBox listBoxActiveCarInspections;

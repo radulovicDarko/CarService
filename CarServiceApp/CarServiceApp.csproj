@@ -73,11 +73,35 @@
     <Compile Include="AddVehicle.Designer.cs">
       <DependentUpon>AddVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarInspectionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarInspectionHistory.Designer.cs">
+      <DependentUpon>CarInspectionHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarInspections.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarInspections.Designer.cs">
       <DependentUpon>CarInspections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientsVehicles.Designer.cs">
+      <DependentUpon>ClientsVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCarInspectionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCarInspectionInfo.Designer.cs">
+      <DependentUpon>DeleteCarInspectionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteClientInfo.Designer.cs">
+      <DependentUpon>DeleteClientInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -85,11 +109,11 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewCarInspection.cs">
+    <Compile Include="NewRepairOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewCarInspection.Designer.cs">
-      <DependentUpon>NewCarInspection.cs</DependentUpon>
+    <Compile Include="NewRepairOrder.Designer.cs">
+      <DependentUpon>NewRepairOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Owners.cs">
       <SubType>Form</SubType>
@@ -99,20 +123,56 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateCarInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCarInspection.Designer.cs">
+      <DependentUpon>UpdateCarInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCarInspectionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCarInspectionInfo.Designer.cs">
+      <DependentUpon>UpdateCarInspectionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOwner.Designer.cs">
+      <DependentUpon>UpdateOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOwnerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOwnerInfo.Designer.cs">
+      <DependentUpon>UpdateOwnerInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddOwner.resx">
       <DependentUpon>AddOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddVehicle.resx">
       <DependentUpon>AddVehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarInspectionHistory.resx">
+      <DependentUpon>CarInspectionHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarInspections.resx">
       <DependentUpon>CarInspections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsVehicles.resx">
+      <DependentUpon>ClientsVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCarInspectionInfo.resx">
+      <DependentUpon>DeleteCarInspectionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteClientInfo.resx">
+      <DependentUpon>DeleteClientInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewCarInspection.resx">
-      <DependentUpon>NewCarInspection.cs</DependentUpon>
+    <EmbeddedResource Include="NewRepairOrder.resx">
+      <DependentUpon>NewRepairOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owners.resx">
       <DependentUpon>Owners.cs</DependentUpon>
@@ -127,6 +187,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateCarInspection.resx">
+      <DependentUpon>UpdateCarInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCarInspectionInfo.resx">
+      <DependentUpon>UpdateCarInspectionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOwner.resx">
+      <DependentUpon>UpdateOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOwnerInfo.resx">
+      <DependentUpon>UpdateOwnerInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\background5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\background6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

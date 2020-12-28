@@ -8,6 +8,7 @@ using Shared.Interfaces.Repository;
 using DataAccessLayer;
 using Shared.Interfaces.Business;
 using BusinessLayer;
+using DataAccessLayer.Models;
 
 namespace CarServiceApp
 {
@@ -28,7 +29,7 @@ namespace CarServiceApp
             using(ServiceProvider serviceProvider = services.BuildServiceProvider())
             {
                 var form1 = serviceProvider.GetRequiredService<MainMenu>();
-                Application.Run(new MainMenu());
+                Application.Run(form1);
             }
         }
 
@@ -36,6 +37,14 @@ namespace CarServiceApp
         {
             services.AddSingleton<IOwnerRepository, OwnerRepository>();
             services.AddScoped<IOwnerBusiness, OwnerBusiness>();
+            services.AddScoped<MainMenu>();
+
+            services.AddSingleton<IRepairOrderRepository, RepairOrderRepository>();
+            services.AddScoped<IRepairOrderBusiness, RepairOrderBusiness>();
+            services.AddScoped<MainMenu>();
+
+            services.AddSingleton<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IVehicleBusiness, VehicleBusiness>();
             services.AddScoped<MainMenu>();
         }
     }
