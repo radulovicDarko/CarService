@@ -1,5 +1,5 @@
 ﻿using BusinessLayer;
-using DataAccessLayer.Models;
+using Shared.Models;
 using Shared.Interfaces.Business;
 using System;
 using System.Collections.Generic;
@@ -34,12 +34,14 @@ namespace CarServiceApp
         private void button1_Click(object sender, EventArgs e)
         {
             CarInspections carInspections = new CarInspections(_repairOrderBusiness,_ownerBusiness,_vehicleBusiness);
+            
             carInspections.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Owners owners = new Owners(_ownerBusiness,_vehicleBusiness);
+           
             owners.ShowDialog();
         }
 

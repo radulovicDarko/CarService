@@ -49,7 +49,6 @@ namespace DataAccessLayer
 
         public int UpdateOwner(Owner owner)
         {
-            Console.WriteLine(owner.Name + " " +owner.Surname + " " +owner.Gender + " " +owner.PhoneNumber + " " +owner.Address + " " +owner.Email + " " +owner.Id);
             int result = DBConnection.EditData(string.Format(
                     "UPDATE Owners SET Name='{0}',Surname='{1}',Gender ='{2}',MobilePhone='{3}',Address ='{4}',Email='{5}'" +
                     "WHERE Id='" +owner.Id+"'", owner.Name, owner.Surname, owner.Gender, owner.PhoneNumber, owner.Address, owner.Email));

@@ -87,12 +87,11 @@ namespace CarServiceApp
 
         private void UpdateCarInspection_Load(object sender, EventArgs e)
         {
-            RefreshData();
+            RefreshData();        
         }
-
         private void buttonAddOwner_Click(object sender, EventArgs e)
         {
-            AddOwner addOwner = new AddOwner(_ownerBusiness);
+            AddClient addOwner = new AddClient(_ownerBusiness);
             addOwner.ShowDialog();
 
             RefreshData();

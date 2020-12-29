@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddOwner.cs">
+    <Compile Include="AddClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddOwner.Designer.cs">
-      <DependentUpon>AddOwner.cs</DependentUpon>
+    <Compile Include="AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
     <Compile Include="AddVehicle.cs">
       <SubType>Form</SubType>
@@ -147,8 +147,8 @@
     <Compile Include="UpdateOwnerInfo.Designer.cs">
       <DependentUpon>UpdateOwnerInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddOwner.resx">
-      <DependentUpon>AddOwner.cs</DependentUpon>
+    <EmbeddedResource Include="AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddVehicle.resx">
       <DependentUpon>AddVehicle.cs</DependentUpon>
