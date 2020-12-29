@@ -108,7 +108,9 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.labelActiveCarInspections);
             this.Controls.Add(this.listBoxCarInspections);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateCarInspectionInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateCarInspectionInfo";
             this.Load += new System.EventHandler(this.UpdateCarInspectionInfo_Load);
             this.ResumeLayout(false);

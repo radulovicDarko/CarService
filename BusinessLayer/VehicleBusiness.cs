@@ -29,9 +29,9 @@ namespace BusinessLayer
         {
             return this.vehicleRepository.UpdateVehicle(vehicle,number);
         }
-        public int deleteVehicle(Owner owner)
+        public int deleteVehicle(Vehicle vehicle)
         {
-            return this.vehicleRepository.DeleteVehicle(owner);
+            return this.vehicleRepository.DeleteVehicle(vehicle);
         }
         public Vehicle getVehicleByID(string chassisNumber) 
         {

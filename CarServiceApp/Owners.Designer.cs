@@ -113,7 +113,9 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonDeleteClient);
             this.Controls.Add(this.buttonNewClient);
             this.Controls.Add(this.buttonClientsVehicles);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Owners";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clients";
             this.Load += new System.EventHandler(this.Owners_Load);
             this.ResumeLayout(false);

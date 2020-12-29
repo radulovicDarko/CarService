@@ -44,6 +44,7 @@ namespace CarServiceApp
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.buttonNewClient = new System.Windows.Forms.Button();
+            this.labelEmailRegex = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelClientsSurname
@@ -185,13 +186,24 @@ namespace CarServiceApp
             this.buttonNewClient.UseVisualStyleBackColor = true;
             this.buttonNewClient.Click += new System.EventHandler(this.buttonNewClient_Click);
             // 
-            // AddOwner
+            // labelEmailRegex
+            // 
+            this.labelEmailRegex.AutoSize = true;
+            this.labelEmailRegex.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmailRegex.ForeColor = System.Drawing.Color.Red;
+            this.labelEmailRegex.Location = new System.Drawing.Point(167, 349);
+            this.labelEmailRegex.Name = "labelEmailRegex";
+            this.labelEmailRegex.Size = new System.Drawing.Size(0, 13);
+            this.labelEmailRegex.TabIndex = 35;
+            // 
+            // AddClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CarServiceApp.Properties.Resources.background5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(385, 435);
+            this.Controls.Add(this.labelEmailRegex);
             this.Controls.Add(this.buttonNewClient);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
@@ -207,7 +219,9 @@ namespace CarServiceApp
             this.Controls.Add(this.textBoxPhone);
             this.Controls.Add(this.labelPhone);
             this.Controls.Add(this.labelClientsGender);
-            this.Name = "AddOwner";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "AddClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddOwner";
             this.Load += new System.EventHandler(this.AddOwner_Load);
             this.ResumeLayout(false);
@@ -231,5 +245,6 @@ namespace CarServiceApp
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Button buttonNewClient;
+        private System.Windows.Forms.Label labelEmailRegex;
     }
 }

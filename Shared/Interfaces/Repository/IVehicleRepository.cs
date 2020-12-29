@@ -12,6 +12,6 @@ namespace Shared.Interfaces.Repository
         List<Vehicle> GetAllVehicles();
         int InsertVehicle(Vehicle temp);
         int UpdateVehicle(Vehicle vehicle, String number);
-        int DeleteVehicle(Owner owner);
+        int DeleteVehicle(Vehicle vehicle);
     }
 }

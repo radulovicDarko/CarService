@@ -89,13 +89,16 @@ namespace CarServiceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CarServiceApp.Properties.Resources.background6;
             this.ClientSize = new System.Drawing.Size(477, 648);
             this.Controls.Add(this.comboBoxClients);
             this.Controls.Add(this.labelClientID);
             this.Controls.Add(this.buttonShowVehicles);
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.listBoxClientsVehicles);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ClientsVehicles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientsVehicles";
             this.Load += new System.EventHandler(this.ClientsVehicles_Load);
             this.ResumeLayout(false);

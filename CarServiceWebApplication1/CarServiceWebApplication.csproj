@@ -184,6 +184,7 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="WebAppClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddClient.aspx.cs">

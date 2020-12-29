@@ -156,7 +156,9 @@
 <td style="width: 387px">&nbsp;</td>
 <td style="width: 120px">&nbsp;</td>
 <td style="width: 36px">&nbsp;</td>
-<td style="width: 129px">&nbsp;</td>
+<td style="width: 129px">
+    <asp:Label ID="LabelEmailRegex" runat="server" BackColor="White" ForeColor="#FF3300"></asp:Label>
+    </td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>

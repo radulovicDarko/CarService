@@ -12,7 +12,7 @@ namespace Shared.Interfaces.Business
         List<Vehicle> getAllVehicles();
         int insertVehicle(Vehicle temp);
         int updateVehicle(Vehicle vehicle, String number);
-        int deleteVehicle(Owner owner);
+        int deleteVehicle(Vehicle vehicle);
         Vehicle getVehicleByID(string chassisNumber);
         List<Vehicle> getVehiclesByOwnerID(int id);
     }

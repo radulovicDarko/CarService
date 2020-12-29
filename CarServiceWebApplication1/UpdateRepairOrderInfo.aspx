@@ -69,7 +69,9 @@
 <td style="width: 211px">
 <asp:TextBox ID="TextBoxChassisNumber" runat="server" Width="183px" Height="26px"></asp:TextBox>
 </td>
-<td>&nbsp;</td>
+<td>
+    <asp:Label ID="LabelChassisNumberRegex" runat="server" ForeColor="Red"></asp:Label>
+    </td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -141,7 +143,9 @@
 <td style="width: 211px">
 <asp:TextBox ID="TextBoxLicencePlate" runat="server" Width="183px" Height="26px"></asp:TextBox>
 </td>
-<td>&nbsp;</td>
+<td>
+    <asp:Label ID="LabelLicencePlateRegex" runat="server" ForeColor="Red"></asp:Label>
+    </td>
 <td>&nbsp;</td>
 </tr>
 <tr>

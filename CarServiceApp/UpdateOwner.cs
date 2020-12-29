@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,8 @@ namespace CarServiceApp
     {
         private readonly IOwnerBusiness _ownerBusiness;
         public static int id = UpdateOwnerInfo.id;
+        private bool valid;
+        private string emailRegex = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
         public UpdateOwner(IOwnerBusiness ownerBusiness)
         {
             this._ownerBusiness = ownerBusiness;
@@ -39,6 +42,7 @@ namespace CarServiceApp
 
         private void buttonUpdateInfo_Click(object sender, EventArgs e)
         {
+            int result = 0;
             try
             {
                 Owner owner = new Owner();
@@ -51,7 +55,21 @@ namespace CarServiceApp
                 owner.Email = textBoxEmail.Text;
                 owner.Id = id;
 
-                int result = _ownerBusiness.updateOwner(owner);
+                if (!Regex.Match(textBoxEmail.Text, emailRegex).Success)
+                {
+                    labelEmailRegex.Text = "Enter valid e-mail address!";
+                    valid = false;
+                }
+                else 
+                { 
+                    labelEmailRegex.Text = "";
+                    valid = true;
+                }
+                
+                if (textBoxClientName.Text != "" && textBoxClientsSurname.Text != "" && textBoxPhone.Text != "" && textBoxAddress.Text != "" && textBoxEmail.Text != "" && valid)
+                    result = _ownerBusiness.updateOwner(owner);
+                else
+                    MessageBox.Show("Make sure you filled up all the gaps correctly!", "Warning");
 
                 if (result != 0)
                 {

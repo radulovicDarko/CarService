@@ -156,7 +156,9 @@
 <td style="width: 387px">&nbsp;</td>
 <td style="width: 120px">&nbsp;</td>
 <td style="width: 36px">&nbsp;</td>
-<td style="width: 129px">&nbsp;</td>
+<td style="width: 129px">
+    <asp:Label ID="LabelEmailRegex" runat="server" BackColor="White" ForeColor="#FF3300"></asp:Label>
+    </td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
@@ -179,11 +181,11 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td style="width: 387px">&nbsp;</td>
-<td style="width: 120px">&nbsp;</td>
-<td style="width: 129px" colspan="2">&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td style="width: 387px; height: 20px;"></td>
+<td style="width: 120px; height: 20px;"></td>
+<td style="width: 129px; height: 20px;" colspan="2"></td>
+<td style="height: 20px"></td>
+<td style="height: 20px"></td>
 </tr>
 </table>
 </asp:Content>

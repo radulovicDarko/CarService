@@ -3,6 +3,7 @@ using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,7 +14,10 @@ namespace CarServiceWebApplication1
     {
         private readonly IOwnerBusiness _ownerBusiness;
         private readonly IVehicleBusiness _vehicleBusiness;
-        private readonly IRepairOrderBusiness _repairOrderBusiness;
+        private readonly IRepairOrderBusiness _repairOrderBusiness; 
+        private String chassisNumberRegex = "[0-9a-zA-Z]{13}";
+        private String licencePlateRegex = "[a-zA-Z][a-zA-Z][0-9][0-9][0-9][a-zA-Z][a-zA-Z]";
+        private bool valid = false;
         public NewRepairOrder() { }
         public NewRepairOrder(IOwnerBusiness ownerBusiness, IVehicleBusiness vehicleBusiness, IRepairOrderBusiness repairOrderBusiness)
         {
@@ -49,6 +53,30 @@ namespace CarServiceWebApplication1
         {
             try
             {
+                int resultInsertVehicle = 0;
+                int resultInsertRepairOrder = 0;
+
+                if (!Regex.Match(TextBoxChassisNumber.Text, chassisNumberRegex).Success)
+                {
+                    LabelChassisNumberRegex.Text = "Enter valid chassis number!";
+                    valid = false;
+                }
+                else
+                {
+                    LabelChassisNumberRegex.Text = "";
+                    valid = true;
+                }
+
+                if (!Regex.Match(TextBoxLicencePlate.Text, licencePlateRegex).Success)
+                {
+                    LabelLicencePlateRegex.Text = "Enter valid licence plate number!";
+                    valid = false;
+                }
+                else
+                {
+                    LabelLicencePlateRegex.Text = "";
+                    valid = true;
+                }
                 RepairOrder repairOrder = new RepairOrder();
 
                 repairOrder.DateOfReceipt = DateTime.Now.ToString();
@@ -57,7 +85,7 @@ namespace CarServiceWebApplication1
                 repairOrder.VehicleId = TextBoxChassisNumber.Text;
                 repairOrder.RepairStatus = false;
 
-                int resultInsertRepairOrder = _repairOrderBusiness.insertRepairOrder(repairOrder);
+             
 
                 Vehicle vehicle = new Vehicle();
 
@@ -74,12 +102,18 @@ namespace CarServiceWebApplication1
 
                 vehicle.OwnerId = _ownerBusiness.getOwnerByNameAndSurname(name, surname).Id;
 
-                int resultInsertVehicle = _vehicleBusiness.insertVehicle(vehicle);
+                if (valid)
+                    resultInsertRepairOrder = _repairOrderBusiness.insertRepairOrder(repairOrder);
+
+                if (valid)
+                    resultInsertVehicle = _vehicleBusiness.insertVehicle(vehicle);
 
                 if (resultInsertRepairOrder != 0 && resultInsertVehicle != 0)
+                { 
                     ClientScript.RegisterStartupScript(this.GetType(), "Success", "alert('Successfully inserted data!');", true);
+                    resetData();
+                }
 
-                resetData();
             }
             catch (Exception ex)
             {

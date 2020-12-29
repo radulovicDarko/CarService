@@ -96,7 +96,9 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxActiveCarInspections);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DeleteCarInspectionInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteCarInspectionInfo";
             this.Load += new System.EventHandler(this.DeleteCarInspectionInfo_Load);
             this.ResumeLayout(false);

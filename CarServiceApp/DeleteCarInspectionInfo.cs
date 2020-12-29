@@ -55,8 +55,12 @@ namespace CarServiceApp
 
             listBoxActiveCarInspections.Items.Clear();
 
-            foreach (RepairOrder repairOrder in repairOrders)
-                listBoxActiveCarInspections.Items.Add("ID: " + repairOrder.Id + ". Date of receipt => " + repairOrder.DateOfReceipt + " Description => " + repairOrder.Description + " Price => " + repairOrder.Price + " Vehicle ID: " + repairOrder.VehicleId);
+            if (repairOrders.Count == 0)
+                listBoxActiveCarInspections.Items.Add("No active car inspections");
+            else
+                foreach (RepairOrder repairOrder in repairOrders)
+                    if(!repairOrder.RepairStatus)
+                        listBoxActiveCarInspections.Items.Add("ID: " + repairOrder.Id + ". Date of receipt => " + repairOrder.DateOfReceipt + " Description => " + repairOrder.Description + " Price => " + repairOrder.Price + " Vehicle ID: " + repairOrder.VehicleId);
         }
 
         private void DeleteCarInspectionInfo_Load(object sender, EventArgs e)
