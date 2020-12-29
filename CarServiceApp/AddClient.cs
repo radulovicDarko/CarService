@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,13 +15,13 @@ namespace CarServiceApp
 {
     public partial class AddClient : Form
     {
-        private readonly IOwnerBusiness _ownerBusiness;
+        private readonly IOwnerBusiness _ownerBusiness; 
+        private string emailRegex = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
         public AddClient(IOwnerBusiness ownerBusiness)
         {
             this._ownerBusiness = ownerBusiness;
             InitializeComponent();
         }
-
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure to close this window?", "Cancel", MessageBoxButtons.YesNo);
@@ -28,7 +29,6 @@ namespace CarServiceApp
             if (confirmResult == DialogResult.Yes)
                 this.Dispose();
         }
-
         private void resetData()
         {
             textBoxClientName.Text = "";
@@ -38,7 +38,6 @@ namespace CarServiceApp
             textBoxPhone.Text = "";
             comboBoxGender.SelectedIndex = 0;
         }
-
         private void buttonNewClient_Click(object sender, EventArgs e)
         {
             bool valid = true;
@@ -67,6 +66,15 @@ namespace CarServiceApp
                     }
                 }
             }
+
+            if (!Regex.Match(textBoxEmail.Text, emailRegex).Success)
+            {
+                labelEmailRegex.Text = "Enter valid e-mail address!";
+                valid = false;
+            }
+            else
+                labelEmailRegex.Text = "";
+
 
             if (valid)
                result = _ownerBusiness.insertOwner(o);

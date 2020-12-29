@@ -30,6 +30,8 @@ namespace CarServiceApp
         private void InitializeComponent()
         {
             this.groupBoxVehicle = new System.Windows.Forms.GroupBox();
+            this.labelLicencePlateRegex = new System.Windows.Forms.Label();
+            this.labelEmailRegex = new System.Windows.Forms.Label();
             this.textBoxLicencePlate = new System.Windows.Forms.TextBox();
             this.labelLicencePlate = new System.Windows.Forms.Label();
             this.textBoxType = new System.Windows.Forms.TextBox();
@@ -56,6 +58,8 @@ namespace CarServiceApp
             // groupBoxVehicle
             // 
             this.groupBoxVehicle.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxVehicle.Controls.Add(this.labelLicencePlateRegex);
+            this.groupBoxVehicle.Controls.Add(this.labelEmailRegex);
             this.groupBoxVehicle.Controls.Add(this.textBoxLicencePlate);
             this.groupBoxVehicle.Controls.Add(this.labelLicencePlate);
             this.groupBoxVehicle.Controls.Add(this.textBoxType);
@@ -69,10 +73,32 @@ namespace CarServiceApp
             this.groupBoxVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxVehicle.Location = new System.Drawing.Point(33, 154);
             this.groupBoxVehicle.Name = "groupBoxVehicle";
-            this.groupBoxVehicle.Size = new System.Drawing.Size(420, 235);
+            this.groupBoxVehicle.Size = new System.Drawing.Size(420, 239);
             this.groupBoxVehicle.TabIndex = 30;
             this.groupBoxVehicle.TabStop = false;
             this.groupBoxVehicle.Text = "Vehicle";
+            // 
+            // labelLicencePlateRegex
+            // 
+            this.labelLicencePlateRegex.AutoSize = true;
+            this.labelLicencePlateRegex.BackColor = System.Drawing.Color.Transparent;
+            this.labelLicencePlateRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLicencePlateRegex.ForeColor = System.Drawing.Color.Red;
+            this.labelLicencePlateRegex.Location = new System.Drawing.Point(205, 222);
+            this.labelLicencePlateRegex.Name = "labelLicencePlateRegex";
+            this.labelLicencePlateRegex.Size = new System.Drawing.Size(0, 13);
+            this.labelLicencePlateRegex.TabIndex = 39;
+            // 
+            // labelEmailRegex
+            // 
+            this.labelEmailRegex.AutoSize = true;
+            this.labelEmailRegex.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmailRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmailRegex.ForeColor = System.Drawing.Color.Red;
+            this.labelEmailRegex.Location = new System.Drawing.Point(205, 60);
+            this.labelEmailRegex.Name = "labelEmailRegex";
+            this.labelEmailRegex.Size = new System.Drawing.Size(0, 13);
+            this.labelEmailRegex.TabIndex = 38;
             // 
             // textBoxLicencePlate
             // 
@@ -282,7 +308,9 @@ namespace CarServiceApp
             this.Controls.Add(this.labelRepairPrice);
             this.Controls.Add(this.textBoxMalfunctionDescription);
             this.Controls.Add(this.labelMalfunctionDesciption);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateCarInspection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateCarInspection";
             this.Load += new System.EventHandler(this.UpdateCarInspection_Load);
             this.groupBoxVehicle.ResumeLayout(false);
@@ -315,5 +343,7 @@ namespace CarServiceApp
         private System.Windows.Forms.TextBox textBoxMalfunctionDescription;
         private System.Windows.Forms.Label labelMalfunctionDesciption;
         private System.Windows.Forms.Button buttonAddOwner;
+        private System.Windows.Forms.Label labelLicencePlateRegex;
+        private System.Windows.Forms.Label labelEmailRegex;
     }
 }

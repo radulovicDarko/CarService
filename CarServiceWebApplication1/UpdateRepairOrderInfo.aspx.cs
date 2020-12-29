@@ -3,6 +3,7 @@ using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,6 +15,9 @@ namespace CarServiceWebApplication1
         private readonly IOwnerBusiness _ownerBusiness;
         private readonly IVehicleBusiness _vehicleBusiness;
         private readonly IRepairOrderBusiness _repairOrderBusiness;
+        private String chassisNumberRegex = "[0-9a-zA-Z]{13}";
+        private String licencePlateRegex = "[a-zA-Z][a-zA-Z][0-9][0-9][0-9][a-zA-Z][a-zA-Z]";
+        private bool valid = false;
         public UpdateRepairOrderInfo() { }
         public UpdateRepairOrderInfo(IOwnerBusiness ownerBusiness, IVehicleBusiness vehicleBusiness, IRepairOrderBusiness repairOrderBusiness)
         {
@@ -49,6 +53,30 @@ namespace CarServiceWebApplication1
         { 
             try
             {
+                int resultUpdateVehicle = 0;
+                int resultUpdateRepairOrder = 0;
+
+                if (!Regex.Match(TextBoxChassisNumber.Text, chassisNumberRegex).Success)
+                {
+                    LabelChassisNumberRegex.Text = "Enter valid chassis number!";
+                    valid = false;
+                }
+                else
+                {
+                    LabelChassisNumberRegex.Text = "";
+                    valid = true;
+                }
+
+                if (!Regex.Match(TextBoxLicencePlate.Text, licencePlateRegex).Success)
+                {
+                    LabelLicencePlateRegex.Text = "Enter valid licence plate number!";
+                    valid = false;
+                }
+                else
+                {
+                    LabelLicencePlateRegex.Text = "";
+                    valid = true;
+                }
                 int id = UpdateRepairOrder.id;
 
                 Vehicle vehicle = new Vehicle();
@@ -61,7 +89,7 @@ namespace CarServiceWebApplication1
                 vehicle.YearOfManufacture = Convert.ToInt32(TextBoxYearOfManufacture.Text);
                 vehicle.LicencePlate = TextBoxLicencePlate.Text;
 
-                int resultUpdateVehicle = _vehicleBusiness.updateVehicle(vehicle, temp.VehicleId);
+                resultUpdateVehicle = _vehicleBusiness.updateVehicle(vehicle, temp.VehicleId);
 
                 RepairOrder repairOrder = new RepairOrder();
 
@@ -70,7 +98,7 @@ namespace CarServiceWebApplication1
                 repairOrder.Price = Convert.ToDecimal(TextBoxRepairPrice.Text);
                 repairOrder.VehicleId = TextBoxChassisNumber.Text;
 
-                int resultUpdateRepairOrder = _repairOrderBusiness.updateRepairOrder(repairOrder, id);
+                resultUpdateRepairOrder = _repairOrderBusiness.updateRepairOrder(repairOrder, id);
 
                 if (resultUpdateRepairOrder != 0 && resultUpdateVehicle != 0)
                 {

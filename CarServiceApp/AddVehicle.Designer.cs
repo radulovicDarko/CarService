@@ -226,7 +226,9 @@ namespace CarServiceApp
             this.Controls.Add(this.textBoxLicencePlate);
             this.Controls.Add(this.labelLicensePlate);
             this.Controls.Add(this.labelType);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddVehicle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddVehicle";
             this.Load += new System.EventHandler(this.AddVehicle_Load);
             this.ResumeLayout(false);

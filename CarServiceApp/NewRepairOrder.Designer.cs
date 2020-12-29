@@ -50,6 +50,8 @@ namespace CarServiceApp
             this.textBoxLicencePlate = new System.Windows.Forms.TextBox();
             this.labelLicencePlate = new System.Windows.Forms.Label();
             this.groupBoxVehicle = new System.Windows.Forms.GroupBox();
+            this.labelLicencePlateRegex = new System.Windows.Forms.Label();
+            this.labelEmailRegex = new System.Windows.Forms.Label();
             this.groupBoxVehicle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,7 +175,7 @@ namespace CarServiceApp
             // 
             // textBoxBrand
             // 
-            this.textBoxBrand.Location = new System.Drawing.Point(201, 75);
+            this.textBoxBrand.Location = new System.Drawing.Point(201, 78);
             this.textBoxBrand.Name = "textBoxBrand";
             this.textBoxBrand.Size = new System.Drawing.Size(175, 26);
             this.textBoxBrand.TabIndex = 14;
@@ -183,7 +185,7 @@ namespace CarServiceApp
             this.labelBrand.AutoSize = true;
             this.labelBrand.BackColor = System.Drawing.SystemColors.Control;
             this.labelBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrand.Location = new System.Drawing.Point(17, 77);
+            this.labelBrand.Location = new System.Drawing.Point(17, 80);
             this.labelBrand.Name = "labelBrand";
             this.labelBrand.Size = new System.Drawing.Size(47, 18);
             this.labelBrand.TabIndex = 13;
@@ -246,6 +248,8 @@ namespace CarServiceApp
             // groupBoxVehicle
             // 
             this.groupBoxVehicle.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxVehicle.Controls.Add(this.labelLicencePlateRegex);
+            this.groupBoxVehicle.Controls.Add(this.labelEmailRegex);
             this.groupBoxVehicle.Controls.Add(this.textBoxLicencePlate);
             this.groupBoxVehicle.Controls.Add(this.labelLicencePlate);
             this.groupBoxVehicle.Controls.Add(this.textBoxType);
@@ -259,10 +263,33 @@ namespace CarServiceApp
             this.groupBoxVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxVehicle.Location = new System.Drawing.Point(21, 152);
             this.groupBoxVehicle.Name = "groupBoxVehicle";
-            this.groupBoxVehicle.Size = new System.Drawing.Size(420, 235);
+            this.groupBoxVehicle.Size = new System.Drawing.Size(420, 243);
             this.groupBoxVehicle.TabIndex = 19;
             this.groupBoxVehicle.TabStop = false;
             this.groupBoxVehicle.Text = "Vehicle";
+            this.groupBoxVehicle.Enter += new System.EventHandler(this.groupBoxVehicle_Enter);
+            // 
+            // labelLicencePlateRegex
+            // 
+            this.labelLicencePlateRegex.AutoSize = true;
+            this.labelLicencePlateRegex.BackColor = System.Drawing.Color.Transparent;
+            this.labelLicencePlateRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLicencePlateRegex.ForeColor = System.Drawing.Color.Red;
+            this.labelLicencePlateRegex.Location = new System.Drawing.Point(203, 224);
+            this.labelLicencePlateRegex.Name = "labelLicencePlateRegex";
+            this.labelLicencePlateRegex.Size = new System.Drawing.Size(0, 13);
+            this.labelLicencePlateRegex.TabIndex = 37;
+            // 
+            // labelEmailRegex
+            // 
+            this.labelEmailRegex.AutoSize = true;
+            this.labelEmailRegex.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmailRegex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmailRegex.ForeColor = System.Drawing.Color.Red;
+            this.labelEmailRegex.Location = new System.Drawing.Point(203, 62);
+            this.labelEmailRegex.Name = "labelEmailRegex";
+            this.labelEmailRegex.Size = new System.Drawing.Size(0, 13);
+            this.labelEmailRegex.TabIndex = 36;
             // 
             // NewRepairOrder
             // 
@@ -283,6 +310,7 @@ namespace CarServiceApp
             this.Controls.Add(this.labelRepairPrice);
             this.Controls.Add(this.textBoxMalfunctionDescription);
             this.Controls.Add(this.labelMalfunctionDesciption);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "NewRepairOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewCarInspection";
@@ -317,5 +345,7 @@ namespace CarServiceApp
         private System.Windows.Forms.TextBox textBoxLicencePlate;
         private System.Windows.Forms.Label labelLicencePlate;
         private System.Windows.Forms.GroupBox groupBoxVehicle;
+        private System.Windows.Forms.Label labelEmailRegex;
+        private System.Windows.Forms.Label labelLicencePlateRegex;
     }
 }

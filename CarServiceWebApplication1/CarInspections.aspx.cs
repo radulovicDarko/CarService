@@ -35,6 +35,9 @@ namespace CarServiceWebApplication1
 
             ListBoxActiveCarInspections.Items.Clear();
 
+            if (repairOrders.Count == 0)
+                ListBoxActiveCarInspections.Items.Add("No active car inspections");
+
             foreach (RepairOrder repairOrder in repairOrders)
                 if (!repairOrder.RepairStatus)
                     ListBoxActiveCarInspections.Items.Add("ID: " + repairOrder.Id + ". Date of receipt => " + repairOrder.DateOfReceipt + " Description => " + repairOrder.Description + " Price => " + repairOrder.Price + " Chassis number: " + repairOrder.VehicleId);

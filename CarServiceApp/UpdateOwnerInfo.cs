@@ -36,6 +36,13 @@ namespace CarServiceApp
 
             foreach (Owner owner in owners)
                 listBoxClients.Items.Add("ID: "+ owner.Id +" Name => " + owner.Name + " Surname => " + owner.Surname + " Gender => " + owner.Gender + " Phone number => " + owner.PhoneNumber + " Address => " + owner.Address +" Email => "+ owner.Email);
+            
+            if (owners.Count == 0)
+            {
+                listBoxClients.Items.Clear();
+
+                listBoxClients.Items.Add("No clients in database!");
+            }
         }
 
         private void buttonUpdateClientInfo_Click(object sender, EventArgs e)

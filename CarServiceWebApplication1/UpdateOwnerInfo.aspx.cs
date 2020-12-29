@@ -3,6 +3,7 @@ using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,6 +13,7 @@ namespace CarServiceWebApplication1
     public partial class UpdateOwnerInfo : System.Web.UI.Page
     {
         private readonly IOwnerBusiness _ownerBusiness;
+        private string emailRegex = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
         public UpdateOwnerInfo() { }
         public UpdateOwnerInfo(IOwnerBusiness ownerBusiness)
         {
@@ -39,6 +41,16 @@ namespace CarServiceWebApplication1
             o.Email = TextBoxEmail.Text;
             o.Id = UpdateOwner.id;
 
+            if (Regex.Match(TextBoxEmail.Text, emailRegex).Success)
+            {
+                valid = true;
+                LabelEmailRegex.Text = "";
+            }
+            else
+            {
+                valid = false;
+                LabelEmailRegex.Text = "Enter valid e-mail address!";
+            }
             if (TextBoxName.Text != "" && TextBoxSurname.Text != "" && TextBoxPhoneNumber.Text != "" && TextBoxAddress.Text != "" && TextBoxEmail.Text != "")
                 valid = true;
             else

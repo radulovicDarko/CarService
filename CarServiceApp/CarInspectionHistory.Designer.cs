@@ -75,7 +75,9 @@ namespace CarServiceApp
             this.Controls.Add(this.labelCarInspectionHistory);
             this.Controls.Add(this.listBoxCarInspectionHistory);
             this.Controls.Add(this.buttonClose);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CarInspectionHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CarInspectionHistory";
             this.Load += new System.EventHandler(this.CarInspectionHistory_Load);
             this.ResumeLayout(false);

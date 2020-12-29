@@ -31,6 +31,14 @@ namespace CarServiceWebApplication1
 
             foreach (Owner owner in owners)
                 DropDownListClients.Items.Add(owner.ToString());
+            
+            if (owners.Count == 0)
+            {
+                ListBoxClientsVehicles.Items.Clear();
+
+                ListBoxClientsVehicles.Items.Add("No clients in database!");
+            }
+
         }
 
         protected void Page_Load(object sender, EventArgs e)

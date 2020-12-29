@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CarServiceApp.AddClient" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQAQSBAIAAAAAGAEACCEAEokQBIAAAIEAAAAAA=</HashCode>
+      <FileName>AddClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.AddVehicle" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAQAACBAABAAAAiAVICCRCICAAAAAEAICgAABAA=</HashCode>
+      <FileName>AddVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.CarInspectionHistory" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwABACCAAAAAAACAAAACAAAAgAAAAAAAAAABAAA=</HashCode>
+      <FileName>CarInspectionHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.CarInspections" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIAAADACAAABCAAECAAACDACACAAAAAMECAAAAAAA=</HashCode>
+      <FileName>CarInspections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.ClientsVehicles" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCIAAAAgACAAAIAAAACAAACCACAAEAAAAAEAAAAAAgQ=</HashCode>
+      <FileName>ClientsVehicles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.DeleteCarInspectionInfo" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAADACAAABAAAACAAAACAAABCQAAAAAAAAAAIgA=</HashCode>
+      <FileName>DeleteCarInspectionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.DeleteClientInfo" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEEAAAAACAAAMAAAAKAAAKCACAAgACAAAAAAAABAgA=</HashCode>
+      <FileName>DeleteClientInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.MainMenu" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DQAEAAABACAAAAAAAACCAICCACAYAAACAGAAAAAAAAA=</HashCode>
+      <FileName>MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.NewRepairOrder" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oQAABAEBECCAIBAAAAyAQIDCACICgQAAAEAICgABJBA=</HashCode>
+      <FileName>NewRepairOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.Owners" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAIAAAAAACAAABFIAACAAACCACAAEACIAAAIAAAAAAI=</HashCode>
+      <FileName>Owners.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.Program" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.UpdateCarInspection" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oQAABAEBECCAIBAAAAzAQADCQCICiQAAAAAICgABBBA=</HashCode>
+      <FileName>UpdateCarInspection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.UpdateCarInspectionInfo" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEBAAABBACAAAAAAAACAAACCCCAQCQAAAAAAAAAAJgA=</HashCode>
+      <FileName>UpdateCarInspectionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.UpdateOwner" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAQAQSBAIAAAAAGAEACCQAEgmABAAAAAEABBAgA=</HashCode>
+      <FileName>UpdateOwner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.UpdateOwnerInfo" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAAIAAgACQAAIAAAACAAAKCAAAAAACAAAAAAAAAAgA=</HashCode>
+      <FileName>UpdateOwnerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAQQBEAAAAQIAAAAAAAAAAAAAIIg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceApp.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

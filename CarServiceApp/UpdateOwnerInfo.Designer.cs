@@ -95,7 +95,9 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonUpdateClientInfo);
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.listBoxClients);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateOwnerInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateOwnerInfo";
             this.Load += new System.EventHandler(this.UpdateOwnerInfo_Load);
             this.ResumeLayout(false);

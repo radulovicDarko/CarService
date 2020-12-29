@@ -25,7 +25,10 @@ namespace CarServiceWebApplication1
 
             ListBoxCarInspectionHistory.Items.Clear();
 
-            foreach (RepairOrder repairOrder in repairOrders)
+            if (repairOrders.Count == 0)
+                ListBoxCarInspectionHistory.Items.Add("No car inspections");
+            else
+                foreach (RepairOrder repairOrder in repairOrders)
                 ListBoxCarInspectionHistory.Items.Add("ID: " + repairOrder.Id + ". Date of receipt => " + repairOrder.DateOfReceipt + " Description => " + repairOrder.Description + " Price => " + repairOrder.Price + " Vehicle ID: " + repairOrder.VehicleId);
         }
         private void ButtonClose_Click(object sender, EventArgs e)

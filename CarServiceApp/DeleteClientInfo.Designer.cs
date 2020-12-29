@@ -109,7 +109,9 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.listBoxClients);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DeleteClientInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteClientInfo";
             this.Load += new System.EventHandler(this.DeleteClientInfo_Load);
             this.ResumeLayout(false);

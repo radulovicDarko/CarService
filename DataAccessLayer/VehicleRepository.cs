@@ -54,10 +54,10 @@ namespace DataAccessLayer
 
             return result;
         }
-        public int DeleteVehicle(Owner owner)
+        public int DeleteVehicle(Vehicle vehicle)
         {
 
-            int result = DBConnection.EditData("DELETE FROM Vehicles WHERE OwnerId=" + owner.Id);
+            int result = DBConnection.EditData("DELETE FROM Vehicles WHERE OwnerId=" + vehicle.OwnerId);
 
             DBConnection.CloseConnection();
 

@@ -44,6 +44,7 @@ namespace CarServiceApp
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.labelPhone = new System.Windows.Forms.Label();
             this.labelClientsGender = new System.Windows.Forms.Label();
+            this.labelEmailRegex = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonUpdateInfo
@@ -185,6 +186,16 @@ namespace CarServiceApp
             this.labelClientsGender.TabIndex = 35;
             this.labelClientsGender.Text = "Gender";
             // 
+            // labelEmailRegex
+            // 
+            this.labelEmailRegex.AutoSize = true;
+            this.labelEmailRegex.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmailRegex.ForeColor = System.Drawing.Color.Red;
+            this.labelEmailRegex.Location = new System.Drawing.Point(167, 351);
+            this.labelEmailRegex.Name = "labelEmailRegex";
+            this.labelEmailRegex.Size = new System.Drawing.Size(0, 13);
+            this.labelEmailRegex.TabIndex = 50;
+            // 
             // UpdateOwner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +203,7 @@ namespace CarServiceApp
             this.BackgroundImage = global::CarServiceApp.Properties.Resources.background5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(376, 447);
+            this.Controls.Add(this.labelEmailRegex);
             this.Controls.Add(this.buttonUpdateInfo);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
@@ -209,6 +221,7 @@ namespace CarServiceApp
             this.Controls.Add(this.labelClientsGender);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UpdateOwner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateOwner";
             this.Load += new System.EventHandler(this.UpdateOwner_Load);
             this.ResumeLayout(false);
@@ -233,5 +246,6 @@ namespace CarServiceApp
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.Label labelClientsGender;
+        private System.Windows.Forms.Label labelEmailRegex;
     }
 }

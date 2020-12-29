@@ -78,6 +78,15 @@ namespace CarServiceWebApplication1
         protected global::System.Web.UI.WebControls.TextBox TextBoxChassisNumber;
 
         /// <summary>
+        /// LabelChassisNumberRegex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelChassisNumberRegex;
+
+        /// <summary>
         /// LabelBrand control.
         /// </summary>
         /// <remarks>
@@ -148,6 +157,15 @@ namespace CarServiceWebApplication1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxLicencePlate;
+
+        /// <summary>
+        /// LabelLicencePlateRegex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelLicencePlateRegex;
 
         /// <summary>
         /// LabelMalfunctionDescription control.
