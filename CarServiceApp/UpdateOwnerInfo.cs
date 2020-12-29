@@ -40,7 +40,7 @@ namespace CarServiceApp
 
         private void buttonUpdateClientInfo_Click(object sender, EventArgs e)
         {
-           
+            try { 
                 id = Convert.ToInt32(textBoxClientID.Text);
 
                 if (_ownerBusiness.getOwnerByID(id) != null)
@@ -54,8 +54,11 @@ namespace CarServiceApp
                 {
                     MessageBox.Show("Make sure you entered correct ID!", "Warning");
                 }
-            
-
+            }
+            catch
+            {
+                MessageBox.Show("Make sure you entered correct ID!", "Warning");
+            }
         }
     }
 }

@@ -38,7 +38,8 @@ namespace CarServiceApp
             listBoxActiveCarInspections.Items.Clear();
 
             foreach (RepairOrder repairOrder in repairOrders)
-                listBoxActiveCarInspections.Items.Add("ID: " + repairOrder.Id + ". Date of receipt => " + repairOrder.DateOfReceipt + " Description => " + repairOrder.Description + " Price => " + repairOrder.Price + " Vehicle ID: " + repairOrder.VehicleId);
+                if(!repairOrder.RepairStatus)
+                    listBoxActiveCarInspections.Items.Add("ID: " + repairOrder.Id + ". Date of receipt => " + repairOrder.DateOfReceipt + " Description => " + repairOrder.Description + " Price => " + repairOrder.Price + " Chassis number: " + repairOrder.VehicleId);
         }
         private void buttonNewInspection_Click(object sender, EventArgs e)
         {

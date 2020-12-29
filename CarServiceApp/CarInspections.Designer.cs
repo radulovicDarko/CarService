@@ -116,6 +116,7 @@ namespace CarServiceApp
             this.Controls.Add(this.buttonNewRepairOrder);
             this.Controls.Add(this.buttonCarInspectionHistory);
             this.Name = "CarInspections";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CarInspections";
             this.Load += new System.EventHandler(this.CarInspections_Load);
             this.ResumeLayout(false);

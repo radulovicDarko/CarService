@@ -41,7 +41,6 @@ namespace CarServiceApp
         {
             try
             {
-                Owner temp = _ownerBusiness.getOwnerByID(id);
                 Owner owner = new Owner();
 
                 owner.Name = textBoxClientName.Text;
@@ -50,7 +49,7 @@ namespace CarServiceApp
                 owner.PhoneNumber = textBoxPhone.Text;
                 owner.Address = textBoxAddress.Text;
                 owner.Email = textBoxEmail.Text;
-                owner.Id = temp.Id;
+                owner.Id = id;
 
                 int result = _ownerBusiness.updateOwner(owner);
 

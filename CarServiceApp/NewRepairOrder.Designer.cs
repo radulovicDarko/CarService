@@ -284,6 +284,7 @@ namespace CarServiceApp
             this.Controls.Add(this.textBoxMalfunctionDescription);
             this.Controls.Add(this.labelMalfunctionDesciption);
             this.Name = "NewRepairOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewCarInspection";
             this.Load += new System.EventHandler(this.NewCarInspection_Load);
             this.groupBoxVehicle.ResumeLayout(false);

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\Busines
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "..\Shared\Shared.csproj", "{EAA5FF23-A04C-4914-87EB-91CBF4541FB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarServiceWebApplication", "..\CarServiceWebApplication1\CarServiceWebApplication.csproj", "{3BBE3FE6-1709-4E6C-B37E-E1CAC63F85DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EAA5FF23-A04C-4914-87EB-91CBF4541FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAA5FF23-A04C-4914-87EB-91CBF4541FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAA5FF23-A04C-4914-87EB-91CBF4541FB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBE3FE6-1709-4E6C-B37E-E1CAC63F85DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBE3FE6-1709-4E6C-B37E-E1CAC63F85DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBE3FE6-1709-4E6C-B37E-E1CAC63F85DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBE3FE6-1709-4E6C-B37E-E1CAC63F85DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

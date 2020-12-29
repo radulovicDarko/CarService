@@ -17,7 +17,6 @@ namespace CarServiceApp
         private readonly IOwnerBusiness _ownerBusiness;
         private readonly IVehicleBusiness _vehicleBusiness;
         private readonly IRepairOrderBusiness _repairOrderBusiness;
-        private static int id;
         public NewRepairOrder(IOwnerBusiness ownerBusiness, IVehicleBusiness vehicleBusiness, IRepairOrderBusiness repairOrderBusiness)
         {
             this._repairOrderBusiness = repairOrderBusiness;
@@ -49,7 +48,6 @@ namespace CarServiceApp
             textBoxRepairPrice.Text = "";
             textBoxYearOfManufacture.Text = "";
             comboBoxOwners.SelectedIndex = 0;
-
         }
 
         private void buttonNewRepairOrder_Click(object sender, EventArgs e)
@@ -108,7 +106,7 @@ namespace CarServiceApp
 
         private void buttonAddOwner_Click(object sender, EventArgs e)
         {
-            AddOwner addOwner = new AddOwner(_ownerBusiness);
+            AddClient addOwner = new AddClient(_ownerBusiness);
             addOwner.ShowDialog();
 
             RefreshData();

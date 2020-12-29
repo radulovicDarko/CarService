@@ -25,7 +25,7 @@ namespace CarServiceApp
 
         private void buttonNewClient_Click(object sender, EventArgs e)
         {
-            AddOwner addOwner = new AddOwner(_ownerBusiness);
+            AddClient addOwner = new AddClient(_ownerBusiness);
             addOwner.ShowDialog();
 
             RefreshData();

@@ -8,7 +8,7 @@ using Shared.Interfaces.Repository;
 using DataAccessLayer;
 using Shared.Interfaces.Business;
 using BusinessLayer;
-using DataAccessLayer.Models;
+using Shared.Models;
 
 namespace CarServiceApp
 {
