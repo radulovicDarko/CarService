@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CarServiceWebApplication1.AddClient" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAEAlAQAACAIAIAAAEAgQCYAAAAAAgAAAAAIAIAAAI=</HashCode>
+      <FileName>AddClient.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.AddOwner" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAEAlAQAACAIAIAAAEAgQCYAAAAAAgAAAAAIAIAAAI=</HashCode>
+      <FileName>AddOwner.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.BundleConfig" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.RouteConfig" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.CarInspectionHistory" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABEAAAAAAAAAAAAQCAAAAAAAAAgAAAAAIAAAA=</HashCode>
+      <FileName>CarInspectionHistory.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.CarInspections" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAICAAABAAAAAAAAAEEAEACAACIASAIAAAAAAAIAAAA=</HashCode>
+      <FileName>CarInspections.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.ClientsVehicles" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAkAAABAAAQAAAAQCQACAAAQAAAAAAAAIAAgA=</HashCode>
+      <FileName>ClientsVehicles.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1._Default" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAQCAAAAEAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.DeleteOwner" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAEAAAAAAAAgAAAQCAACACAAAAgBAAAAIAAgA=</HashCode>
+      <FileName>DeleteOwner.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.DeleteRepairOrder" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAAABEAAAAAAAAgAAAQCAAAAAQAAAABAAAAIAAgA=</HashCode>
+      <FileName>DeleteRepairOrder.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.Global" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.NewRepairOrder" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oQwAEIERUAaAIAAAAAEQgQCIAGAAQAgAAAAAAAIAAAY=</HashCode>
+      <FileName>NewRepairOrder.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.SiteMaster" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Site.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.Site_Mobile" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAACAAAAAIAAAIAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Site.Mobile.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.UpdateOwner" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAABkAAAAAAAAAAAAQCAACACACAAAAQAgAIAAgA=</HashCode>
+      <FileName>UpdateOwner.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.UpdateOwnerInfo" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAEAlAQAACAIAAAAAEAAQCYAAAAAAgBAAAEIAIAAAI=</HashCode>
+      <FileName>UpdateOwnerInfo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.UpdateRepairOrder" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAAABEAAAAAAAAAAAAQCAACAAEAARAAAEAIJAAgA=</HashCode>
+      <FileName>UpdateRepairOrder.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.UpdateRepairOrderInfo" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oQgAEIERUASAIAAAAAEQgQCIAGAAQAoAAAAAAAIAAAY=</HashCode>
+      <FileName>UpdateRepairOrderInfo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication1.ViewSwitcher" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAIA=</HashCode>
+      <FileName>ViewSwitcher.ascx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarServiceWebApplication.Clients" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAEAAAAAAIAAAICACAkAAAAAAAAAAAgAKAAUA=</HashCode>
+      <FileName>Clients.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
